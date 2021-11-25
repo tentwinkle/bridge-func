@@ -1,0 +1,7 @@
+eth_mainnet tag
+
+fift -s new-multisig.fif -1 1 1629284400 mainnet-bsc-new 6 uf_public_keys
+
+fift -s new-collector.fif
+
+fift -s new-bridge.fif

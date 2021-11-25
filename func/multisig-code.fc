@@ -374,7 +374,7 @@ cell merge_inner_queries(cell a, cell b) method_id {
   .end_cell();
 }
 
-int get_lock_timeout() {
+int get_lock_timeout() method_id {
   (_, _, _, _, _, _, int spend_delay) = unpack_state();
   return spend_delay;
 }
