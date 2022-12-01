@@ -1,0 +1,39 @@
+__________________________________________________________________________
+eth_testnet tag
+__________________________________________________________________________
+Multisig compiled by `func-0.0.99`
+
+func -o multisig-code.fif -SPA stdlib.fc multisig-code.fc
+
+fift -s new-multisig.fif -1 5 1638630765 testnet-eth-new 2 uf_public_keys_testnet
+
+new wallet address = -1:8e575769805544cc49b2bc01134fc82786a67522a1e7f11cd3e9d9849af9f37b
+Non-bounceable address (for init): 0f-OV1dpgFVEzEmyvAETT8gnhqZ1IqHn8RzT6dmEmvnze7Ki
+Bounceable address (for later access): kf-OV1dpgFVEzEmyvAETT8gnhqZ1IqHn8RzT6dmEmvnze-9n
+
+__________________________________________________________________________
+Collector compiled by `func-0.0.99`
+
+func -o votes-collector.fif -SPA stdlib.fc message_utils.fc bridge-config.fc votes-collector.fc
+
+fift -s new-collector.fif
+
+new collector address = 0:80d56fc8dbaefe96e568f42cd5ee209cac0d4e3b9bd57970f4407002bc19f58c
+Non-bounceable address (for init): UQCA1W_I267-luVo9CzV7iCcrA1OO5vVeXD0QHACvBn1jNiR
+Bounceable address (for later access): EQCA1W_I267-luVo9CzV7iCcrA1OO5vVeXD0QHACvBn1jIVU
+
+__________________________________________________________________________
+Bridge compiled by `func-0.0.99`
+
+func -o bridge_code2.fif -SPA stdlib.fc text_utils.fc message_utils.fc bridge-config.fc bridge_code.fc
+
+fift -s new-bridge.fif
+
+new bridge address = -1:b9e998aa2946eda7f031d9083857087bc975c908ef1c34901bdb6f49e975dee3
+Non-bounceable address (for init): Uf-56ZiqKUbtp_Ax2Qg4Vwh7yXXJCO8cNJAb229J6XXe47tH
+Bounceable address (for later access): Ef-56ZiqKUbtp_Ax2Qg4Vwh7yXXJCO8cNJAb229J6XXe4-aC
+
+__________________________________________________________________________
+Config71:
+
+fift -s build-config71.fif Ef-56ZiqKUbtp_Ax2Qg4Vwh7yXXJCO8cNJAb229J6XXe4-aC kf-OV1dpgFVEzEmyvAETT8gnhqZ1IqHn8RzT6dmEmvnze-9n 0xDB15ffaf2c88F2d89Db9365a5160D5b8c9448Ea6 -1:5fc2c9192c4b860df613440b6fb7d93e984764688b249143ac1303f0d70cd793 0xc7faAC9634035b1096D7bdA0840081A9B52aa79c -1:233f3ae14d89682a04c2b0680414dc7b39d1feb09f7c7ad267c2b2154ac1711f 0x1FF516E5ce789085CFF86d37fc27747dF852a80a -1:9fc4608fb8f28d47a4f819c171350b8b5394f290b28402d9315847c0d70056cb 0x717205ed5c247B02EeD3b020747F166e264C208E -o eth-testnet-config71.boc
