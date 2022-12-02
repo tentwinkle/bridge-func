@@ -43,6 +43,8 @@ func -o multisig-code.fif -SPA stdlib.fc multisig-code.fc
   
     [Announcement](https://t.me/tonblockchain/35), [Description](https://github.com/ton-blockchain/TIPs/issues/35)
 
+* Aug 20, 2021 - ETH-TON Bridge public launch - https://t.me/tonblockchain/36
+
 * Sep 09, 2021 - Update TON nodes to support Config72 (TON-BSC bridge config) - [Announcement](https://t.me/tonblockchain/40).
 
 * Sep 27, 2021 - Network voting for Config 71 - https://t.me/tonblockchain/43
@@ -58,6 +60,8 @@ func -o multisig-code.fif -SPA stdlib.fc multisig-code.fc
     BSC Bridge - Ef9NXAIQs12t2qIZ-sRZ26D977H65Ol6DQeXc5_gUNaUys5r
    
     https://t.me/tonblockchain/44, https://github.com/ton-blockchain/TIPs/issues/37.
+
+* Oct 04, 2021 - BSC-TON Bridge public launch - https://t.me/tonblockchain/45
 
 * Nov 22, 2021-Nov 26, 2021 - To prevent overflow, external messages have been replaced with internal messages in multisig (governance).
     
