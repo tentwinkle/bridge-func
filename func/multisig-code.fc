@@ -240,7 +240,7 @@ _ unpack_owner_info(slice cs) inline_ref {
   var cs = in_msg_cell.begin_parse();
   cs~skip_bits(4);
   slice s_addr = cs~load_msg_addr();
-  var msg = begin_cell().store_uint(0x18, 6)
+  var msg = begin_cell().store_uint(0x18, 6) ;; bounceable
                         .store_slice(s_addr)
                         .store_grams(0)
                         .store_uint(0, 1 + 4 + 4 + 64 + 32 + 1 + 1)

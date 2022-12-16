@@ -80,9 +80,9 @@ int calculate_fee(int msg_value, fees)  {
     throw_unless(315, total_locked >= 0);
     swap_amount -= fee;
 
-    ;; int_msg_info$0 ihr_disabled:Bool bounce:Bool bounced:Bool src:MsgAddress -> 011000
+
     var msg = begin_cell()
-      .store_uint(0x10, 6) ;; #int_msg_info$0 ihr_disabled:Bool bounce:Bool bounced:Bool src:MsgAddressInt = 0 1 0 0 0 00
+      .store_uint(0x10, 6) ;; non-bounceable
       .store_uint(4, 3).store_int(wc, 8).store_uint(addr_hash, 256)
       .store_grams(swap_amount)
       .store_uint(0, 1 + 4 + 4 + 64 + 32 + 1 + 1)
@@ -97,7 +97,7 @@ int calculate_fee(int msg_value, fees)  {
   } elseif (operation == 4) { ;; migrate
 
     var msg = begin_cell()
-      .store_uint(0x18, 6) ;; #int_msg_info$0 ihr_disabled:Bool bounce:Bool bounced:Bool src:MsgAddressInt = 0 1 1 0 00
+      .store_uint(0x18, 6) ;; bounceable
       .store_uint(4, 3).store_int(-1, 8).store_uint(bridge_address, 256)
       .store_grams(total_locked)
       .store_uint(0, 1 + 4 + 4 + 64 + 32 + 1 + 1)
@@ -109,7 +109,7 @@ int calculate_fee(int msg_value, fees)  {
     ;; reserve total_locked + 100 Toncoins for storage fees
     raw_reserve(total_locked + 100000000000, 2);
     var msg = begin_cell()
-      .store_uint(0x18, 6) ;; #int_msg_info$0 ihr_disabled:Bool bounce:Bool bounced:Bool src:MsgAddressInt = 0 1 1 0 00
+      .store_uint(0x18, 6) ;; bounceable
       .store_slice(s_addr)
       .store_grams(0)
       .store_uint(0, 1 + 4 + 4 + 64 + 32 + 1 + 1);
