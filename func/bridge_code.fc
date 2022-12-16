@@ -15,7 +15,7 @@ builder store_fees(builder b, (int, int, int) fees) inline {
 }
 
 () save_data(int state_flags, int total_locked, slice collector_address, fees) impure inline_ref {
-  var st = begin_cell().store_uint(state_flags, 8)
+  var st = begin_cell().store_uint(state_flags, 8) ;; 0 - TON->EVM transfers enabled; 1 - TON->EVM transfers disabled
                        .store_grams(total_locked)
                        .store_slice(collector_address)
                        .store_fees(fees)
