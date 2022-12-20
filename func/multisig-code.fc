@@ -354,10 +354,12 @@ cell messages_by_mask(int mask) method_id {
   return a;
 }
 
+;; ATTENTION: Misleading naming - the function returns the messages that were signed by that owner.
 cell get_messages_unsigned_by_id(int id) method_id {
   return messages_by_mask(1 << id);
 }
 
+;; ATTENTION: Misleading naming - returns all the messages not yet "executed".
 cell get_messages_unsigned() method_id {
   return messages_by_mask(~ 0);
 }

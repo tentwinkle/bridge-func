@@ -1,5 +1,4 @@
 () send_receipt_message(addr, ans_tag, query_id, body, grams, mode) impure inline_ref {
-  ;; int_msg_info$0 ihr_disabled:Bool bounce:Bool bounced:Bool src:MsgAddress -> 011000
   var msg = begin_cell()
     .store_uint(0x18, 6) ;; bounceable
     .store_slice(addr)
@@ -14,7 +13,6 @@
 }
 
 () send_text_receipt_message(addr, grams, mode) impure inline_ref {
-  ;; int_msg_info$0 ihr_disabled:Bool bounce:Bool bounced:Bool src:MsgAddress -> 011000
   var msg = begin_cell()
     .store_uint(0x18, 6) ;; bounceable
     .store_slice(addr)
