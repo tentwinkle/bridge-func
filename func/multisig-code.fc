@@ -359,7 +359,7 @@ cell get_messages_unsigned_by_id(int id) method_id {
   return messages_by_mask(1 << id);
 }
 
-;; ATTENTION: Misleading naming - returns all the messages not yet "executed".
+;; returns all the messages not yet "executed".
 cell get_messages_unsigned() method_id {
   return messages_by_mask(~ 0);
 }
